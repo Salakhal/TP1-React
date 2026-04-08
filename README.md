@@ -172,3 +172,16 @@ Ce TP m'a permis de comprendre la logique fondamentale de React. J'ai pu constat
 
 ---
 
+
+## 👤 Auteur
+
+* **École Normale Supérieure de Marrakech**
+  
+* **Réalisé par :** SALMA LAKHAL
+  
+* **Filière  :** CLE_INFO_S5
+
+  
+* **Encadré par :** Pr. Mohamed LACHGAR
+
+* **Module :** `Développement Front-End moderne avec React`
