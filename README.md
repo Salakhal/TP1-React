@@ -1,70 +1,174 @@
-# Getting Started with Create React App
+# 📘 TP 1 : Création d'une application React simple
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📚 Cours
 
-## Available Scripts
+Développement Front-End moderne avec React
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🎯 Objectif du TP
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ce TP a pour objectif de découvrir les bases de React à travers la création d'une application simple.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+À la fin de ce TP, nous avons appris à :
 
-### `npm test`
+* Initialiser un projet React avec Create React App
+* Créer des composants fonctionnels avec JSX
+* Utiliser les props pour transmettre des données dynamiques
+* Générer des listes d'éléments automatiquement avec la méthode `.map()`
+* Structurer une application React et lui appliquer un design CSS moderne
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Installation et lancement
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Prérequis
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Node.js installé
+* npm installé
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Vérification :
 
-### `npm run eject`
+    node -v
+    npm -v
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Création du projet
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    npx create-react-app tp-react
+    cd tp-react
+    npm install prop-types
+    npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Application accessible sur :
 
-## Learn More
+    http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🧱 Structure du projet
 
-### Code Splitting
+    src/
+    ├── App.js
+    ├── HelloWorld.js
+    ├── Greeting.js
+    ├── Profil.js
+    ├── Voiture.js
+    ├── ListeCourses.js
+    ├── index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧩 Description des composants
 
-### Making a Progressive Web App
+### 🔹 HelloWorld
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Affiche un message de bienvenue simple :
 
-### Advanced Configuration
+    Salut tout le monde !
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### 🔹 Greeting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Affiche un message personnalisé grâce aux props :
 
-### `npm run build` fails to minify
+    Bienvenue parmi nous, Yassine !
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### 🔹 Profil
+
+Affiche :
+
+* une image utilisateur (importée depuis le dossier public)
+* le nom de l'utilisateur (Emma Lopez)
+
+Utilisation de **PropTypes** pour sécuriser les données de l'objet.
+
+---
+
+### 🔹 Voiture
+
+Affiche les informations d’une voiture (marque, modèle, couleur).
+Nous avons utilisé `.map()` pour afficher un tableau entier de véhicules :
+
+    Véhicule : Dacia Sandero, Couleur : Gris
+    Véhicule : Peugeot 208, Couleur : Rouge
+    Véhicule : Hyundai Tucson, Couleur : Noir
+
+---
+
+### 🔹 ListeCourses
+
+Affiche une liste dynamique d’éléments à partir d'un tableau.
+Le composant a été réutilisé 3 fois pour afficher différentes catégories :
+
+    1. Banane
+    2. Ananas
+    3. Mangue
+
+---
+
+## 🧠 Concepts utilisés
+
+### ✔ Composants
+
+Permettent de découper l’interface en parties indépendantes et réutilisables.
+
+### ✔ Props
+
+Permettent de transmettre des données (textes, tableaux, objets) entre les composants parents et enfants.
+
+### ✔ JSX
+
+Syntaxe qui permet d’écrire du HTML directement dans le JavaScript.
+
+### ✔ PropTypes
+
+Permet de vérifier strictement le type des données reçues pour éviter les bugs.
+
+---
+
+## 🎨 Design
+
+Une refonte visuelle complète a été appliquée via `index.css` avec :
+
+* l'intégration de la police Google "Poppins"
+* des cartes (cards) blanches sur un fond gris clair
+* des ombres légères (box-shadow) pour faire ressortir le profil
+* une disposition en Flexbox pour aligner les listes de courses côte à côte
+
+---
+
+## ✅ Résultat final
+
+L'application affiche :
+
+* un message d'accueil personnalisé
+* un profil utilisateur avec une image bien cadrée
+* une liste générée dynamiquement de 3 voitures
+* 3 listes de courses disposées horizontalement
+
+  
+<img width="813" height="1533" alt="image" src="https://github.com/user-attachments/assets/0c828f72-4791-46d3-9036-fe940aeb0a53" />
+
+
+---
+
+## ⚠️ Problèmes rencontrés
+
+* **Image cassée :** L'image d'Emma Lopez ne s'affichait pas. Corrigé en modifiant l'extension dans le code (`/user.jpeg` au lieu de `/user.png`).
+* **Erreur ENOENT au lancement :** Le terminal ne trouvait pas le `package.json` car j'avais déplacé le projet dans mon dossier de cours (S6). Corrigé en ouvrant le bon dossier racine avec VS Code.
+* **Confusion de serveur :** J'ai pensé qu'il fallait mettre le projet dans le dossier `htdocs` d'Apache. J'ai compris que React utilise son propre serveur Node.js via `npm start`.
+
+---
+
+## 🏁 Conclusion
+
+Ce TP m'a permis de comprendre la logique fondamentale de React. J'ai pu constater la puissance de la réutilisabilité des composants (notamment en passant d'une seule voiture à une liste complète) et j'ai appris à corriger des erreurs courantes d'environnement.
+
+---
+
